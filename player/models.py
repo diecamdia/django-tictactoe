@@ -11,3 +11,6 @@ class Invitation(models.Model):
         on_delete=models.CASCADE)
     message = models.CharField(max_length=300)
     timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return "Sent invitation to {0}".format(self.to_user)
