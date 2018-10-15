@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/home/osboxes/sources/django-projects/django-env/bin/python",
+    "python.pythonPath": "/home/osboxes/sources/django/bin/python",
     "files.associations": {
         "**/templates/*.html": "django-html",
         "**/templates/*": "django-txt",
@@ -9,4 +9,5 @@
         "django-html": "html"
     },
     "git.enableSmartCommit": true,
+    "python.linting.pylintEnabled": false,
 }

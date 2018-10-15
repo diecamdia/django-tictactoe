@@ -8,8 +8,13 @@ class Invitation(models.Model):
         on_delete=models.CASCADE)
     to_user = models.ForeignKey(User, 
         related_name="invitations_received",
+        verbose_name="User to inviete",
+        help_text="Please select the user you want to play game with.",
         on_delete=models.CASCADE)
-    message = models.CharField(max_length=300)
+    message = models.CharField(max_length=300,
+        blank=True,
+        verbose_name="Optional Message",
+        help_text="It's always nice to add a friendly message!")
     timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
